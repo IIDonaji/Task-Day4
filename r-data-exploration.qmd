@@ -1,7 +1,39 @@
 ---
+uset---
 title: "r-data-exploration"
 format: html
 editor: visual
 ---
 
 ## Data exploration & summarizing in R
+
+```{r}
+# set up code chunk
+library(tidyverse)
+library(skimr)
+library(GGally)
+View(diamonds)
+names(diamonds)
+dim(diamonds)
+summary(diamonds)
+head(diamonds)
+tail(diamonds)
+skimr::skim(diamonds)
+```
+
+```{r}
+# creating a pairplot
+GGally::ggpairs(diamonds)
+
+```
+
+```{r}
+ggplot(data = diamonds, aes(x = carat, y = price,)) +
+  geom_point(color = "coral")
+
+```
+
+```{r}
+ggplot(data = diamonds, aes(x = carat)) +
+  geom_histogram(fill ="blue")
+```
