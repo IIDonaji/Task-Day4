@@ -30,10 +30,16 @@ GGally::ggpairs(diamonds)
 ```{r}
 ggplot(data = diamonds, aes(x = carat, y = price,)) +
   geom_point(color = "coral")
+geom_jitter()
 
 ```
 
 ```{r}
 ggplot(data = diamonds, aes(x = carat)) +
   geom_histogram(fill ="blue")
+```
+
+```{r}
+ggplot(data = diamonds, aes(x = clarity, y = price)) +
+  geom_boxplot()
 ```
